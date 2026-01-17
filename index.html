@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Happy Birthday Varshini</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
@@ -15,26 +15,40 @@
             margin: 0;
             padding: 0;
             overflow-x: hidden;
+            -webkit-tap-highlight-color: transparent;
         }
         .font-pacifico { font-family: 'Pacifico', cursive; }
         
-        /* Custom styles to match the provided CSS */
+        /* Responsive font sizes using clamp for fluid typography */
         .area {
             font-family: 'Pacifico', cursive;
-            font-size: 3.5rem;
+            font-size: clamp(2.5rem, 10vw, 4rem);
             color: #ff4d4d;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            line-height: 1.2;
         }
         .type-wrap {
-            font-size: 1.5rem;
+            font-size: clamp(1.1rem, 4vw, 1.5rem);
             color: #555;
-            min-height: 80px;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 15px;
         }
         .banner-img {
             width: 100%;
             max-width: 600px;
             border-radius: 15px;
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            height: auto;
+        }
+        
+        /* Smooth transitions for loader */
+        .loader-exit {
+            opacity: 0;
+            pointer-events: none;
         }
     </style>
     <script type="importmap">
